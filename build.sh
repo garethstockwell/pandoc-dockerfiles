@@ -27,7 +27,7 @@ directory=.
 pandoc_commit=main
 repo=core
 stack=static
-target=${stack}-${repo}
+target=
 verbosity=0
 
 while true; do
@@ -67,6 +67,8 @@ while true; do
             ;;
     esac
 done
+
+[ -n "$target" ] || target=${stack}-${repo}
 
 ### Actions
 action=${1}
